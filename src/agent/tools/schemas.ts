@@ -9,7 +9,10 @@ export const VerifyInput = z.object({
 
 export const SearchInput = z.object({
   date: z.string().describe("Date to search, YYYY-MM-DD"),
-  doctor: z.string().optional().describe("Optional doctor name"),
+  doctor: z
+    .string()
+    .nullable()
+    .describe("Doctor name to filter by, or null for all doctors"),
 });
 
 export const BookInput = z.object({
