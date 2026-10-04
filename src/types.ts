@@ -35,6 +35,7 @@ export type ToolCall = {
 export type ConversationState = {
   db: DB;
   verifiedPatientId: string | null;
+  failedVerifications: number;
   messages: any[]; // OpenAI messages
   toolLog: ToolCall[];
 };
