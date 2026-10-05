@@ -12,3 +12,5 @@
 - **Prompt is a versioned file (`prompts/v1.md`) with a `{{TODAY}}` placeholder:** lets the improver write v2 as a new file and keeps runs reproducible. Emergency handling is intentionally missing from v1 so the eval has a real failure to fix.
 
 - **Agent loop caps tool calls per turn and always answers every tool_call:** prevents runaway loops and OpenAI API errors. State (including the system prompt) is created in one place (`createState`) so every run starts clean.
+
+- **Chat CLI shows tool calls under each reply:** makes it visible when the agent acts versus only talks, which is the same gap the eval's tool-log checks cover.
