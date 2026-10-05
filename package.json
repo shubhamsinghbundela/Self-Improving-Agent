@@ -4,7 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "chat": "bun run src/chat.ts"
+    "chat": "bun run src/chat.ts",
+    "eval": "bun run src/eval.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
