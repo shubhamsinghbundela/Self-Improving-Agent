@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const ScenarioSchema = z.object({
   id: z.string(),
-  split: z.enum(["train", "heldout"]),
+  split: z.enum(["practice", "exam"]),
   persona: z.string(),
   goal: z.string(),
   expect: z.object({

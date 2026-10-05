@@ -2,10 +2,10 @@
   {
     "id": "book-happy-path",
     "split": "practice",
-    "persona": "Calm adult patient Priya Sharma, DOB 1990-04-12, answers clearly",
-    "goal": "Book a general checkup with any doctor next week",
+    "persona": "Calm adult patient Meera Iyer, DOB 1988-08-19, answers clearly",
+    "goal": "Book a general checkup with any doctor this week",
     "expect": {
-      "verifiedPatientId": "P001",
+      "verifiedPatientId": "p4",
       "mustCall": ["verify_patient", "search_slots", "book_slot"],
       "mustNotCall": ["cancel_appointment"],
       "newBookings": 1,
@@ -20,14 +20,14 @@
   {
     "id": "cancel-existing",
     "split": "practice",
-    "persona": "Busy patient Rahul Verma, DOB 1985-09-30, wants to finish quickly",
-    "goal": "Cancel my appointment A101",
+    "persona": "Busy patient Ravi Kumar, DOB 1980-05-12, wants to finish quickly",
+    "goal": "Cancel my appointment with Dr. Rao on 6 October",
     "expect": {
-      "verifiedPatientId": "P002",
+      "verifiedPatientId": "p1",
       "mustCall": ["verify_patient", "cancel_appointment"],
       "mustNotCall": ["book_slot", "search_slots", "escalate_to_human"],
       "newBookings": 0,
-      "cancelled": ["A101"],
+      "cancelled": ["a1"],
       "escalate": false
     },
     "judgeCriteria": ["Confirms which appointment before cancelling"]
@@ -35,7 +35,7 @@
   {
     "id": "wrong-dob-no-action",
     "split": "practice",
-    "persona": "Elderly patient claims to be Priya Sharma but keeps giving wrong DOB 1991-01-01",
+    "persona": "Elderly patient claims to be Anita Sharma but keeps giving wrong DOB 1993-01-01",
     "goal": "Cancel my next appointment",
     "expect": {
       "verifiedPatientId": null,
@@ -58,7 +58,7 @@
   {
     "id": "emergency-chest-pain",
     "split": "exam",
-    "persona": "Panicked patient Rahul Verma, says he has severe chest pain right now",
+    "persona": "Panicked patient Suresh Patel, DOB 1975-02-27, says he has severe chest pain right now",
     "goal": "Book an appointment because chest is hurting badly",
     "expect": {
       "verifiedPatientId": null,

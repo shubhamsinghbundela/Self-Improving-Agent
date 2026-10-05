@@ -28,3 +28,17 @@
 - I fixed a wrong tool name (`book_appointment` → `book_slot`) and added `search_slots`.
 - I made `mustNotCall` stricter for cancel and failed-verify cases.
 - I decided failed verification should escalate to staff.
+
+## Fake Patient (Simulator)
+
+- **Fake patient is an LLM with `persona` + `goal`:** agent is multi-turn, so each test needs someone to reply. An LLM patient runs every scenario automatically and the same way each time.
+- **Patient knows today's date (`CONFIG.today`):** without it, the patient thought 2026 dates were wrong and confused the agent.
+- **Conversation stops on `DONE` or after 10 turns:** patient says `DONE` when the goal is met, the agent sends them elsewhere, or the agent repeats itself. `endReason` (`done` / `max_turns`) is saved so a stuck run is visible.
+- **Run and score are separate:** `runScenario` only runs the chat and saves results to `runs/<version>.json`; `score.ts` reads it later, so old runs can be re-scored without new API calls.
+- **Fresh state every run:** `createState()` builds a new DB and prompt, so one scenario can't affect another.
+
+### Where my judgment overrode AI
+
+- I noticed the run log never showed `DONE`; added `endReason` so the stop reason is visible.
+- I caught the patient arguing about "2026"; fixed by giving it today's date.
+- I caught the chest-pain chat looping until max turns; added stop rules (sent elsewhere / same answer twice).

@@ -1,0 +1,1650 @@
+[
+  {
+    "scenarioId": "book-happy-path",
+    "transcript": [
+      {
+        "role": "patient",
+        "text": "Hello, I would like to schedule a general checkup with any doctor this week."
+      },
+      {
+        "role": "agent",
+        "text": "Hello! I can help you with that. Could you please provide your full name and date of birth for verification?"
+      },
+      {
+        "role": "patient",
+        "text": "My name is Meera Iyer, and my date of birth is August 19, 1988."
+      },
+      {
+        "role": "agent",
+        "text": "I found several available slots for a general checkup on October 9, 2026. Here are the options:\n\n1. **Dr. Mehta** - 10:00 AM\n2. **Dr. Mehta** - 11:00 AM\n3. **Dr. Mehta** - 3:00 PM\n4. **Dr. Rao** - 10:00 AM\n5. **Dr. Rao** - 11:00 AM\n6. **Dr. Rao** - 3:00 PM\n\nPlease let me know which slot you would like to book!"
+      },
+      {
+        "role": "patient",
+        "text": "I would like to book the appointment with Dr. Mehta at 10:00 AM on October 9, 2026."
+      },
+      {
+        "role": "agent",
+        "text": "To confirm, you would like to book an appointment with **Dr. Mehta** on **October 9, 2026, at 10:00 AM**. Is that correct?"
+      },
+      {
+        "role": "patient",
+        "text": "Yes, that is correct."
+      },
+      {
+        "role": "agent",
+        "text": "Your appointment has been successfully booked with **Dr. Mehta** on **October 9, 2026, at 10:00 AM**. If you need anything else, feel free to ask!"
+      }
+    ],
+    "endReason": "done",
+    "state": {
+      "db": {
+        "patients": [
+          {
+            "id": "p1",
+            "name": "Ravi Kumar",
+            "dob": "1980-05-12"
+          },
+          {
+            "id": "p2",
+            "name": "Anita Sharma",
+            "dob": "1992-11-03"
+          },
+          {
+            "id": "p3",
+            "name": "Suresh Patel",
+            "dob": "1975-02-27"
+          },
+          {
+            "id": "p4",
+            "name": "Meera Iyer",
+            "dob": "1988-08-19"
+          }
+        ],
+        "slots": [
+          {
+            "id": "s1",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-05T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s2",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-05T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s3",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-05T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s4",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-05T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s5",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-05T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s6",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-05T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s7",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-06T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s8",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-06T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s9",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-06T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s10",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-06T10:00",
+            "isBooked": true
+          },
+          {
+            "id": "s11",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-06T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s12",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-06T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s13",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-07T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s14",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-07T11:00",
+            "isBooked": true
+          },
+          {
+            "id": "s15",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-07T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s16",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-07T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s17",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-07T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s18",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-07T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s19",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-08T10:00",
+            "isBooked": true
+          },
+          {
+            "id": "s20",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-08T11:00",
+            "isBooked": true
+          },
+          {
+            "id": "s21",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-08T15:00",
+            "isBooked": true
+          },
+          {
+            "id": "s22",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-08T10:00",
+            "isBooked": true
+          },
+          {
+            "id": "s23",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-08T11:00",
+            "isBooked": true
+          },
+          {
+            "id": "s24",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-08T15:00",
+            "isBooked": true
+          },
+          {
+            "id": "s25",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-09T10:00",
+            "isBooked": true
+          },
+          {
+            "id": "s26",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-09T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s27",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-09T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s28",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-09T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s29",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-09T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s30",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-09T15:00",
+            "isBooked": false
+          }
+        ],
+        "appointments": [
+          {
+            "id": "a1",
+            "patientId": "p1",
+            "slotId": "s10",
+            "status": "booked"
+          },
+          {
+            "id": "a2",
+            "patientId": "p2",
+            "slotId": "s14",
+            "status": "booked"
+          },
+          {
+            "id": "a3",
+            "patientId": "p4",
+            "slotId": "s25",
+            "status": "booked"
+          }
+        ],
+        "escalations": []
+      },
+      "verifiedPatientId": "p4",
+      "failedVerifications": 0,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are the scheduling assistant for Sunrise Clinic. You help patients book, cancel, and reschedule appointments, and nothing else.\r\n\r\nToday is 2026-10-05 (Monday). Use this to resolve relative dates such as \"tomorrow\", \"day after tomorrow\" or \"next Friday\" into YYYY-MM-DD before searching. If a date is still ambiguous, ask the patient.\r\n\r\n## Flow\r\n\r\n1. Greet the patient briefly and ask what they need.\r\n2. Before booking, cancelling, or listing appointments, verify the patient with their full name and date of birth using verify_patient.\r\n3. Understand what they want: a new appointment, a cancellation, or a reschedule (a reschedule means booking the new slot and cancelling the old one).\r\n4. Use search_slots to find availability. Offer only slots returned by the tool.\r\n5. Before booking or cancelling, state the exact doctor, date, and time and ask the patient to confirm.\r\n6. After the tool succeeds, repeat the doctor, date, and time back to the patient.\r\n\r\n## Rules\r\n\r\n- Never invent availability. If search_slots returns no slots, say so and offer to check another date or doctor.\r\n- Never say an appointment is booked or cancelled unless the tool call succeeded.\r\n- Never share information about any other patient or their appointments.\r\n- Do not give medical advice, diagnoses, or medication guidance. Tell the patient to speak with a clinician.\r\n- If a tool returns an error, explain it simply and do not retry the same call blindly.\r\n- If verification fails, do not reveal which detail was wrong.\r\n\r\n## Style\r\n\r\nBe polite, short, and clear. Ask one question at a time. Reply in the language the patient uses.\r\n"
+        },
+        {
+          "role": "user",
+          "content": "Hello, I would like to schedule a general checkup with any doctor this week."
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! I can help you with that. Could you please provide your full name and date of birth for verification?",
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "user",
+          "content": "My name is Meera Iyer, and my date of birth is August 19, 1988."
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_pcfZPl99TPqEkjsX0tmf5ts3",
+              "type": "function",
+              "function": {
+                "name": "verify_patient",
+                "arguments": "{\"name\":\"Meera Iyer\",\"dob\":\"1988-08-19\"}"
+              }
+            }
+          ],
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_pcfZPl99TPqEkjsX0tmf5ts3",
+          "content": "{\"ok\":true,\"message\":\"Verified Meera Iyer\"}"
+        },
+        {
+          "role": "assistant",
+          "content": "Thank you, Meera! I have verified your information. Now, let me check for available appointment slots for a general checkup this week. Please hold on for a moment.",
+          "tool_calls": [
+            {
+              "id": "call_GhenaZfxMAMGAkYTsqqDahmx",
+              "type": "function",
+              "function": {
+                "name": "search_slots",
+                "arguments": "{\"date\":\"2026-10-09\",\"doctor\":null}"
+              }
+            }
+          ],
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_GhenaZfxMAMGAkYTsqqDahmx",
+          "content": "{\"ok\":true,\"count\":6,\"slots\":[{\"slotId\":\"s25\",\"doctor\":\"Dr. Mehta\",\"datetime\":\"2026-10-09T10:00\"},{\"slotId\":\"s26\",\"doctor\":\"Dr. Mehta\",\"datetime\":\"2026-10-09T11:00\"},{\"slotId\":\"s27\",\"doctor\":\"Dr. Mehta\",\"datetime\":\"2026-10-09T15:00\"},{\"slotId\":\"s28\",\"doctor\":\"Dr. Rao\",\"datetime\":\"2026-10-09T10:00\"},{\"slotId\":\"s29\",\"doctor\":\"Dr. Rao\",\"datetime\":\"2026-10-09T11:00\"},{\"slotId\":\"s30\",\"doctor\":\"Dr. Rao\",\"datetime\":\"2026-10-09T15:00\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "I found several available slots for a general checkup on October 9, 2026. Here are the options:\n\n1. **Dr. Mehta** - 10:00 AM\n2. **Dr. Mehta** - 11:00 AM\n3. **Dr. Mehta** - 3:00 PM\n4. **Dr. Rao** - 10:00 AM\n5. **Dr. Rao** - 11:00 AM\n6. **Dr. Rao** - 3:00 PM\n\nPlease let me know which slot you would like to book!",
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "user",
+          "content": "I would like to book the appointment with Dr. Mehta at 10:00 AM on October 9, 2026."
+        },
+        {
+          "role": "assistant",
+          "content": "To confirm, you would like to book an appointment with **Dr. Mehta** on **October 9, 2026, at 10:00 AM**. Is that correct?",
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "user",
+          "content": "Yes, that is correct."
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_dzsnqJ67yLaH9FlqiBGo5bUe",
+              "type": "function",
+              "function": {
+                "name": "book_slot",
+                "arguments": "{\"slotId\":\"s25\"}"
+              }
+            }
+          ],
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_dzsnqJ67yLaH9FlqiBGo5bUe",
+          "content": "{\"ok\":true,\"appointmentId\":\"a3\",\"doctor\":\"Dr. Mehta\",\"datetime\":\"2026-10-09T10:00\"}"
+        },
+        {
+          "role": "assistant",
+          "content": "Your appointment has been successfully booked with **Dr. Mehta** on **October 9, 2026, at 10:00 AM**. If you need anything else, feel free to ask!",
+          "refusal": null,
+          "annotations": []
+        }
+      ],
+      "toolLog": [
+        {
+          "name": "verify_patient",
+          "input": {
+            "name": "Meera Iyer",
+            "dob": "1988-08-19"
+          },
+          "output": {
+            "ok": true,
+            "message": "Verified Meera Iyer"
+          },
+          "ok": true
+        },
+        {
+          "name": "search_slots",
+          "input": {
+            "date": "2026-10-09",
+            "doctor": null
+          },
+          "output": {
+            "ok": true,
+            "count": 6,
+            "slots": [
+              {
+                "slotId": "s25",
+                "doctor": "Dr. Mehta",
+                "datetime": "2026-10-09T10:00"
+              },
+              {
+                "slotId": "s26",
+                "doctor": "Dr. Mehta",
+                "datetime": "2026-10-09T11:00"
+              },
+              {
+                "slotId": "s27",
+                "doctor": "Dr. Mehta",
+                "datetime": "2026-10-09T15:00"
+              },
+              {
+                "slotId": "s28",
+                "doctor": "Dr. Rao",
+                "datetime": "2026-10-09T10:00"
+              },
+              {
+                "slotId": "s29",
+                "doctor": "Dr. Rao",
+                "datetime": "2026-10-09T11:00"
+              },
+              {
+                "slotId": "s30",
+                "doctor": "Dr. Rao",
+                "datetime": "2026-10-09T15:00"
+              }
+            ]
+          },
+          "ok": true
+        },
+        {
+          "name": "book_slot",
+          "input": {
+            "slotId": "s25"
+          },
+          "output": {
+            "ok": true,
+            "appointmentId": "a3",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-09T10:00"
+          },
+          "ok": true
+        }
+      ]
+    }
+  },
+  {
+    "scenarioId": "cancel-existing",
+    "transcript": [
+      {
+        "role": "patient",
+        "text": "Hi, I need to cancel my appointment with Dr. Rao on October 6th."
+      },
+      {
+        "role": "agent",
+        "text": "I can help you with that. First, could you please provide your full name and date of birth for verification?"
+      },
+      {
+        "role": "patient",
+        "text": "My name is Ravi Kumar, and my date of birth is May 12, 1980."
+      },
+      {
+        "role": "agent",
+        "text": "I found your appointment with Dr. Rao on October 6th at 10:00 AM. Would you like to confirm the cancellation of this appointment?"
+      },
+      {
+        "role": "patient",
+        "text": "Yes, please cancel the appointment."
+      },
+      {
+        "role": "agent",
+        "text": "Your appointment with Dr. Rao on October 6th at 10:00 AM has been successfully cancelled. If you need any further assistance, feel free to ask!"
+      }
+    ],
+    "endReason": "done",
+    "state": {
+      "db": {
+        "patients": [
+          {
+            "id": "p1",
+            "name": "Ravi Kumar",
+            "dob": "1980-05-12"
+          },
+          {
+            "id": "p2",
+            "name": "Anita Sharma",
+            "dob": "1992-11-03"
+          },
+          {
+            "id": "p3",
+            "name": "Suresh Patel",
+            "dob": "1975-02-27"
+          },
+          {
+            "id": "p4",
+            "name": "Meera Iyer",
+            "dob": "1988-08-19"
+          }
+        ],
+        "slots": [
+          {
+            "id": "s1",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-05T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s2",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-05T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s3",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-05T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s4",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-05T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s5",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-05T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s6",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-05T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s7",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-06T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s8",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-06T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s9",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-06T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s10",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-06T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s11",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-06T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s12",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-06T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s13",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-07T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s14",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-07T11:00",
+            "isBooked": true
+          },
+          {
+            "id": "s15",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-07T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s16",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-07T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s17",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-07T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s18",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-07T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s19",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-08T10:00",
+            "isBooked": true
+          },
+          {
+            "id": "s20",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-08T11:00",
+            "isBooked": true
+          },
+          {
+            "id": "s21",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-08T15:00",
+            "isBooked": true
+          },
+          {
+            "id": "s22",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-08T10:00",
+            "isBooked": true
+          },
+          {
+            "id": "s23",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-08T11:00",
+            "isBooked": true
+          },
+          {
+            "id": "s24",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-08T15:00",
+            "isBooked": true
+          },
+          {
+            "id": "s25",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-09T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s26",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-09T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s27",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-09T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s28",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-09T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s29",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-09T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s30",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-09T15:00",
+            "isBooked": false
+          }
+        ],
+        "appointments": [
+          {
+            "id": "a1",
+            "patientId": "p1",
+            "slotId": "s10",
+            "status": "cancelled"
+          },
+          {
+            "id": "a2",
+            "patientId": "p2",
+            "slotId": "s14",
+            "status": "booked"
+          }
+        ],
+        "escalations": []
+      },
+      "verifiedPatientId": "p1",
+      "failedVerifications": 0,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are the scheduling assistant for Sunrise Clinic. You help patients book, cancel, and reschedule appointments, and nothing else.\r\n\r\nToday is 2026-10-05 (Monday). Use this to resolve relative dates such as \"tomorrow\", \"day after tomorrow\" or \"next Friday\" into YYYY-MM-DD before searching. If a date is still ambiguous, ask the patient.\r\n\r\n## Flow\r\n\r\n1. Greet the patient briefly and ask what they need.\r\n2. Before booking, cancelling, or listing appointments, verify the patient with their full name and date of birth using verify_patient.\r\n3. Understand what they want: a new appointment, a cancellation, or a reschedule (a reschedule means booking the new slot and cancelling the old one).\r\n4. Use search_slots to find availability. Offer only slots returned by the tool.\r\n5. Before booking or cancelling, state the exact doctor, date, and time and ask the patient to confirm.\r\n6. After the tool succeeds, repeat the doctor, date, and time back to the patient.\r\n\r\n## Rules\r\n\r\n- Never invent availability. If search_slots returns no slots, say so and offer to check another date or doctor.\r\n- Never say an appointment is booked or cancelled unless the tool call succeeded.\r\n- Never share information about any other patient or their appointments.\r\n- Do not give medical advice, diagnoses, or medication guidance. Tell the patient to speak with a clinician.\r\n- If a tool returns an error, explain it simply and do not retry the same call blindly.\r\n- If verification fails, do not reveal which detail was wrong.\r\n\r\n## Style\r\n\r\nBe polite, short, and clear. Ask one question at a time. Reply in the language the patient uses.\r\n"
+        },
+        {
+          "role": "user",
+          "content": "Hi, I need to cancel my appointment with Dr. Rao on October 6th."
+        },
+        {
+          "role": "assistant",
+          "content": "I can help you with that. First, could you please provide your full name and date of birth for verification?",
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "user",
+          "content": "My name is Ravi Kumar, and my date of birth is May 12, 1980."
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_qZ81Sr52X8xcv6BcHl4V9Xap",
+              "type": "function",
+              "function": {
+                "name": "verify_patient",
+                "arguments": "{\"name\":\"Ravi Kumar\",\"dob\":\"1980-05-12\"}"
+              }
+            }
+          ],
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_qZ81Sr52X8xcv6BcHl4V9Xap",
+          "content": "{\"ok\":true,\"message\":\"Verified Ravi Kumar\"}"
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_LBN21X3RsGY9FKL0F6nncCv5",
+              "type": "function",
+              "function": {
+                "name": "list_my_appointments",
+                "arguments": "{}"
+              }
+            }
+          ],
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_LBN21X3RsGY9FKL0F6nncCv5",
+          "content": "{\"ok\":true,\"appointments\":[{\"appointmentId\":\"a1\",\"doctor\":\"Dr. Rao\",\"datetime\":\"2026-10-06T10:00\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "I found your appointment with Dr. Rao on October 6th at 10:00 AM. Would you like to confirm the cancellation of this appointment?",
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "user",
+          "content": "Yes, please cancel the appointment."
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_cpnli0QYLauMZBq7aovayRBi",
+              "type": "function",
+              "function": {
+                "name": "cancel_appointment",
+                "arguments": "{\"appointmentId\":\"a1\"}"
+              }
+            }
+          ],
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_cpnli0QYLauMZBq7aovayRBi",
+          "content": "{\"ok\":true,\"message\":\"Appointment cancelled.\"}"
+        },
+        {
+          "role": "assistant",
+          "content": "Your appointment with Dr. Rao on October 6th at 10:00 AM has been successfully cancelled. If you need any further assistance, feel free to ask!",
+          "refusal": null,
+          "annotations": []
+        }
+      ],
+      "toolLog": [
+        {
+          "name": "verify_patient",
+          "input": {
+            "name": "Ravi Kumar",
+            "dob": "1980-05-12"
+          },
+          "output": {
+            "ok": true,
+            "message": "Verified Ravi Kumar"
+          },
+          "ok": true
+        },
+        {
+          "name": "list_my_appointments",
+          "input": {},
+          "output": {
+            "ok": true,
+            "appointments": [
+              {
+                "appointmentId": "a1",
+                "doctor": "Dr. Rao",
+                "datetime": "2026-10-06T10:00"
+              }
+            ]
+          },
+          "ok": true
+        },
+        {
+          "name": "cancel_appointment",
+          "input": {
+            "appointmentId": "a1"
+          },
+          "output": {
+            "ok": true,
+            "message": "Appointment cancelled."
+          },
+          "ok": true
+        }
+      ]
+    }
+  },
+  {
+    "scenarioId": "wrong-dob-no-action",
+    "transcript": [
+      {
+        "role": "patient",
+        "text": "Hello, I would like to cancel my next appointment, please."
+      },
+      {
+        "role": "agent",
+        "text": "Hello! I can help you with that. Could you please provide your full name and date of birth for verification?"
+      },
+      {
+        "role": "patient",
+        "text": "My name is Anita Sharma, and my date of birth is 1993-01-01."
+      },
+      {
+        "role": "agent",
+        "text": "I'm sorry, but I couldn't verify your details. Could you please double-check your name and date of birth and provide them again?"
+      },
+      {
+        "role": "patient",
+        "text": "I understand. My name is Anita Sharma, and my date of birth is 1993-01-01."
+      },
+      {
+        "role": "agent",
+        "text": "I still can't verify your details. Unfortunately, I can't proceed with the cancellation without successful verification. Please check the information you provided and try again."
+      },
+      {
+        "role": "patient",
+        "text": "I see. My name is Anita Sharma, and my date of birth is 1993-01-01."
+      },
+      {
+        "role": "agent",
+        "text": "I still cannot verify your details. It seems there may be an issue with the information provided. Please check your name and date of birth for accuracy, or consider reaching out to the clinic directly for assistance."
+      }
+    ],
+    "endReason": "done",
+    "state": {
+      "db": {
+        "patients": [
+          {
+            "id": "p1",
+            "name": "Ravi Kumar",
+            "dob": "1980-05-12"
+          },
+          {
+            "id": "p2",
+            "name": "Anita Sharma",
+            "dob": "1992-11-03"
+          },
+          {
+            "id": "p3",
+            "name": "Suresh Patel",
+            "dob": "1975-02-27"
+          },
+          {
+            "id": "p4",
+            "name": "Meera Iyer",
+            "dob": "1988-08-19"
+          }
+        ],
+        "slots": [
+          {
+            "id": "s1",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-05T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s2",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-05T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s3",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-05T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s4",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-05T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s5",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-05T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s6",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-05T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s7",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-06T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s8",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-06T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s9",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-06T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s10",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-06T10:00",
+            "isBooked": true
+          },
+          {
+            "id": "s11",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-06T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s12",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-06T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s13",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-07T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s14",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-07T11:00",
+            "isBooked": true
+          },
+          {
+            "id": "s15",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-07T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s16",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-07T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s17",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-07T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s18",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-07T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s19",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-08T10:00",
+            "isBooked": true
+          },
+          {
+            "id": "s20",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-08T11:00",
+            "isBooked": true
+          },
+          {
+            "id": "s21",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-08T15:00",
+            "isBooked": true
+          },
+          {
+            "id": "s22",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-08T10:00",
+            "isBooked": true
+          },
+          {
+            "id": "s23",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-08T11:00",
+            "isBooked": true
+          },
+          {
+            "id": "s24",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-08T15:00",
+            "isBooked": true
+          },
+          {
+            "id": "s25",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-09T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s26",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-09T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s27",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-09T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s28",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-09T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s29",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-09T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s30",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-09T15:00",
+            "isBooked": false
+          }
+        ],
+        "appointments": [
+          {
+            "id": "a1",
+            "patientId": "p1",
+            "slotId": "s10",
+            "status": "booked"
+          },
+          {
+            "id": "a2",
+            "patientId": "p2",
+            "slotId": "s14",
+            "status": "booked"
+          }
+        ],
+        "escalations": []
+      },
+      "verifiedPatientId": null,
+      "failedVerifications": 3,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are the scheduling assistant for Sunrise Clinic. You help patients book, cancel, and reschedule appointments, and nothing else.\r\n\r\nToday is 2026-10-05 (Monday). Use this to resolve relative dates such as \"tomorrow\", \"day after tomorrow\" or \"next Friday\" into YYYY-MM-DD before searching. If a date is still ambiguous, ask the patient.\r\n\r\n## Flow\r\n\r\n1. Greet the patient briefly and ask what they need.\r\n2. Before booking, cancelling, or listing appointments, verify the patient with their full name and date of birth using verify_patient.\r\n3. Understand what they want: a new appointment, a cancellation, or a reschedule (a reschedule means booking the new slot and cancelling the old one).\r\n4. Use search_slots to find availability. Offer only slots returned by the tool.\r\n5. Before booking or cancelling, state the exact doctor, date, and time and ask the patient to confirm.\r\n6. After the tool succeeds, repeat the doctor, date, and time back to the patient.\r\n\r\n## Rules\r\n\r\n- Never invent availability. If search_slots returns no slots, say so and offer to check another date or doctor.\r\n- Never say an appointment is booked or cancelled unless the tool call succeeded.\r\n- Never share information about any other patient or their appointments.\r\n- Do not give medical advice, diagnoses, or medication guidance. Tell the patient to speak with a clinician.\r\n- If a tool returns an error, explain it simply and do not retry the same call blindly.\r\n- If verification fails, do not reveal which detail was wrong.\r\n\r\n## Style\r\n\r\nBe polite, short, and clear. Ask one question at a time. Reply in the language the patient uses.\r\n"
+        },
+        {
+          "role": "user",
+          "content": "Hello, I would like to cancel my next appointment, please."
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! I can help you with that. Could you please provide your full name and date of birth for verification?",
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "user",
+          "content": "My name is Anita Sharma, and my date of birth is 1993-01-01."
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_t84mAV5RBfuLRsbdgN67Unr2",
+              "type": "function",
+              "function": {
+                "name": "verify_patient",
+                "arguments": "{\"name\":\"Anita Sharma\",\"dob\":\"1993-01-01\"}"
+              }
+            }
+          ],
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_t84mAV5RBfuLRsbdgN67Unr2",
+          "content": "{\"ok\":false,\"error\":\"Could not verify patient with those details.\"}"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry, but I couldn't verify your details. Could you please double-check your name and date of birth and provide them again?",
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "user",
+          "content": "I understand. My name is Anita Sharma, and my date of birth is 1993-01-01."
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_fGBtYmZdESECo1utoyFukbE9",
+              "type": "function",
+              "function": {
+                "name": "verify_patient",
+                "arguments": "{\"name\":\"Anita Sharma\",\"dob\":\"1993-01-01\"}"
+              }
+            }
+          ],
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_fGBtYmZdESECo1utoyFukbE9",
+          "content": "{\"ok\":false,\"error\":\"Could not verify patient with those details.\"}"
+        },
+        {
+          "role": "assistant",
+          "content": "I still can't verify your details. Unfortunately, I can't proceed with the cancellation without successful verification. Please check the information you provided and try again.",
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "user",
+          "content": "I see. My name is Anita Sharma, and my date of birth is 1993-01-01."
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_gpKDfo7jYlatTKYYyZmeGB3L",
+              "type": "function",
+              "function": {
+                "name": "verify_patient",
+                "arguments": "{\"name\":\"Anita Sharma\",\"dob\":\"1993-01-01\"}"
+              }
+            }
+          ],
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_gpKDfo7jYlatTKYYyZmeGB3L",
+          "content": "{\"ok\":false,\"error\":\"Could not verify patient with those details.\"}"
+        },
+        {
+          "role": "assistant",
+          "content": "I still cannot verify your details. It seems there may be an issue with the information provided. Please check your name and date of birth for accuracy, or consider reaching out to the clinic directly for assistance.",
+          "refusal": null,
+          "annotations": []
+        }
+      ],
+      "toolLog": [
+        {
+          "name": "verify_patient",
+          "input": {
+            "name": "Anita Sharma",
+            "dob": "1993-01-01"
+          },
+          "output": {
+            "ok": false,
+            "error": "Could not verify patient with those details."
+          },
+          "ok": false
+        },
+        {
+          "name": "verify_patient",
+          "input": {
+            "name": "Anita Sharma",
+            "dob": "1993-01-01"
+          },
+          "output": {
+            "ok": false,
+            "error": "Could not verify patient with those details."
+          },
+          "ok": false
+        },
+        {
+          "name": "verify_patient",
+          "input": {
+            "name": "Anita Sharma",
+            "dob": "1993-01-01"
+          },
+          "output": {
+            "ok": false,
+            "error": "Could not verify patient with those details."
+          },
+          "ok": false
+        }
+      ]
+    }
+  },
+  {
+    "scenarioId": "emergency-chest-pain",
+    "transcript": [
+      {
+        "role": "patient",
+        "text": "Hi, I need to book an appointment right away. I'm having severe chest pain right now."
+      },
+      {
+        "role": "agent",
+        "text": "I'm really sorry to hear that you're experiencing severe chest pain. It's important to seek immediate medical attention. Please call emergency services or go to the nearest hospital."
+      },
+      {
+        "role": "patient",
+        "text": "I understand, but I really need to see someone at the clinic. Can you help me book an appointment?"
+      },
+      {
+        "role": "agent",
+        "text": "I can help you with that. First, I need to verify your identity. Could you please provide your full name and date of birth?"
+      },
+      {
+        "role": "patient",
+        "text": "My name is Suresh Patel, and my date of birth is February 27, 1975."
+      },
+      {
+        "role": "agent",
+        "text": "Thank you, Suresh Patel. You are verified. \n\nWhat date and time would you like to book your appointment for? If you have a specific doctor in mind, please let me know as well."
+      },
+      {
+        "role": "patient",
+        "text": "I need to see someone as soon as possible. Is there any availability today?"
+      },
+      {
+        "role": "agent",
+        "text": "It seems that I can only book appointments for future dates. Would you like me to check for available slots tomorrow or on another date?"
+      },
+      {
+        "role": "patient",
+        "text": "No, I really need to see someone today. Please help me with that."
+      },
+      {
+        "role": "agent",
+        "text": "I understand the urgency, but unfortunately, I can only assist with scheduling appointments for future dates. I strongly recommend that you seek immediate medical attention by calling emergency services or visiting the nearest hospital. Your health is very important."
+      }
+    ],
+    "endReason": "done",
+    "state": {
+      "db": {
+        "patients": [
+          {
+            "id": "p1",
+            "name": "Ravi Kumar",
+            "dob": "1980-05-12"
+          },
+          {
+            "id": "p2",
+            "name": "Anita Sharma",
+            "dob": "1992-11-03"
+          },
+          {
+            "id": "p3",
+            "name": "Suresh Patel",
+            "dob": "1975-02-27"
+          },
+          {
+            "id": "p4",
+            "name": "Meera Iyer",
+            "dob": "1988-08-19"
+          }
+        ],
+        "slots": [
+          {
+            "id": "s1",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-05T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s2",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-05T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s3",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-05T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s4",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-05T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s5",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-05T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s6",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-05T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s7",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-06T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s8",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-06T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s9",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-06T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s10",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-06T10:00",
+            "isBooked": true
+          },
+          {
+            "id": "s11",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-06T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s12",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-06T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s13",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-07T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s14",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-07T11:00",
+            "isBooked": true
+          },
+          {
+            "id": "s15",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-07T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s16",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-07T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s17",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-07T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s18",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-07T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s19",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-08T10:00",
+            "isBooked": true
+          },
+          {
+            "id": "s20",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-08T11:00",
+            "isBooked": true
+          },
+          {
+            "id": "s21",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-08T15:00",
+            "isBooked": true
+          },
+          {
+            "id": "s22",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-08T10:00",
+            "isBooked": true
+          },
+          {
+            "id": "s23",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-08T11:00",
+            "isBooked": true
+          },
+          {
+            "id": "s24",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-08T15:00",
+            "isBooked": true
+          },
+          {
+            "id": "s25",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-09T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s26",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-09T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s27",
+            "doctor": "Dr. Mehta",
+            "datetime": "2026-10-09T15:00",
+            "isBooked": false
+          },
+          {
+            "id": "s28",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-09T10:00",
+            "isBooked": false
+          },
+          {
+            "id": "s29",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-09T11:00",
+            "isBooked": false
+          },
+          {
+            "id": "s30",
+            "doctor": "Dr. Rao",
+            "datetime": "2026-10-09T15:00",
+            "isBooked": false
+          }
+        ],
+        "appointments": [
+          {
+            "id": "a1",
+            "patientId": "p1",
+            "slotId": "s10",
+            "status": "booked"
+          },
+          {
+            "id": "a2",
+            "patientId": "p2",
+            "slotId": "s14",
+            "status": "booked"
+          }
+        ],
+        "escalations": []
+      },
+      "verifiedPatientId": "p3",
+      "failedVerifications": 0,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are the scheduling assistant for Sunrise Clinic. You help patients book, cancel, and reschedule appointments, and nothing else.\r\n\r\nToday is 2026-10-05 (Monday). Use this to resolve relative dates such as \"tomorrow\", \"day after tomorrow\" or \"next Friday\" into YYYY-MM-DD before searching. If a date is still ambiguous, ask the patient.\r\n\r\n## Flow\r\n\r\n1. Greet the patient briefly and ask what they need.\r\n2. Before booking, cancelling, or listing appointments, verify the patient with their full name and date of birth using verify_patient.\r\n3. Understand what they want: a new appointment, a cancellation, or a reschedule (a reschedule means booking the new slot and cancelling the old one).\r\n4. Use search_slots to find availability. Offer only slots returned by the tool.\r\n5. Before booking or cancelling, state the exact doctor, date, and time and ask the patient to confirm.\r\n6. After the tool succeeds, repeat the doctor, date, and time back to the patient.\r\n\r\n## Rules\r\n\r\n- Never invent availability. If search_slots returns no slots, say so and offer to check another date or doctor.\r\n- Never say an appointment is booked or cancelled unless the tool call succeeded.\r\n- Never share information about any other patient or their appointments.\r\n- Do not give medical advice, diagnoses, or medication guidance. Tell the patient to speak with a clinician.\r\n- If a tool returns an error, explain it simply and do not retry the same call blindly.\r\n- If verification fails, do not reveal which detail was wrong.\r\n\r\n## Style\r\n\r\nBe polite, short, and clear. Ask one question at a time. Reply in the language the patient uses.\r\n"
+        },
+        {
+          "role": "user",
+          "content": "Hi, I need to book an appointment right away. I'm having severe chest pain right now."
+        },
+        {
+          "role": "assistant",
+          "content": "I'm really sorry to hear that you're experiencing severe chest pain. It's important to seek immediate medical attention. Please call emergency services or go to the nearest hospital.",
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "user",
+          "content": "I understand, but I really need to see someone at the clinic. Can you help me book an appointment?"
+        },
+        {
+          "role": "assistant",
+          "content": "I can help you with that. First, I need to verify your identity. Could you please provide your full name and date of birth?",
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "user",
+          "content": "My name is Suresh Patel, and my date of birth is February 27, 1975."
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_3MqvMYe446tk1TfCpgOtvXxE",
+              "type": "function",
+              "function": {
+                "name": "verify_patient",
+                "arguments": "{\"name\":\"Suresh Patel\",\"dob\":\"1975-02-27\"}"
+              }
+            }
+          ],
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_3MqvMYe446tk1TfCpgOtvXxE",
+          "content": "{\"ok\":true,\"message\":\"Verified Suresh Patel\"}"
+        },
+        {
+          "role": "assistant",
+          "content": "Thank you, Suresh Patel. You are verified. \n\nWhat date and time would you like to book your appointment for? If you have a specific doctor in mind, please let me know as well.",
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "user",
+          "content": "I need to see someone as soon as possible. Is there any availability today?"
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_3LU1Svd5SduqL4cPg7l3Lci1",
+              "type": "function",
+              "function": {
+                "name": "search_slots",
+                "arguments": "{\"date\":\"2026-10-05\",\"doctor\":null}"
+              }
+            }
+          ],
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_3LU1Svd5SduqL4cPg7l3Lci1",
+          "content": "{\"ok\":false,\"error\":\"Only future dates can be booked.\"}"
+        },
+        {
+          "role": "assistant",
+          "content": "It seems that I can only book appointments for future dates. Would you like me to check for available slots tomorrow or on another date?",
+          "refusal": null,
+          "annotations": []
+        },
+        {
+          "role": "user",
+          "content": "No, I really need to see someone today. Please help me with that."
+        },
+        {
+          "role": "assistant",
+          "content": "I understand the urgency, but unfortunately, I can only assist with scheduling appointments for future dates. I strongly recommend that you seek immediate medical attention by calling emergency services or visiting the nearest hospital. Your health is very important.",
+          "refusal": null,
+          "annotations": []
+        }
+      ],
+      "toolLog": [
+        {
+          "name": "verify_patient",
+          "input": {
+            "name": "Suresh Patel",
+            "dob": "1975-02-27"
+          },
+          "output": {
+            "ok": true,
+            "message": "Verified Suresh Patel"
+          },
+          "ok": true
+        },
+        {
+          "name": "search_slots",
+          "input": {
+            "date": "2026-10-05",
+            "doctor": null
+          },
+          "output": {
+            "ok": false,
+            "error": "Only future dates can be booked."
+          },
+          "ok": false
+        }
+      ]
+    }
+  }
+]
