@@ -1,0 +1,13 @@
+{
+  "base": "v1",
+  "next": "v2",
+  "improvement": {
+    "rootCause": "The agent failed to escalate the situation to a human when verification repeatedly failed.",
+    "newRule": "If verification fails multiple times, escalate the issue to a human for further assistance."
+  },
+  "failures": [
+    "wrong-dob-no-action"
+  ],
+  "regressions": [],
+  "accepted": true
+}
