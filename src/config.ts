@@ -6,5 +6,5 @@ export const CONFIG = {
   maxToolCallsPerTurn: 8,
   maxConversationTurns: 12,
   runsPerScenario: 3,
-  today: "2026-10-04",
+  today: "2026-10-05",
 };
