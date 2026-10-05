@@ -14,3 +14,17 @@
 - **Agent loop caps tool calls per turn and always answers every tool_call:** prevents runaway loops and OpenAI API errors. State (including the system prompt) is created in one place (`createState`) so every run starts clean.
 
 - **Chat CLI shows tool calls under each reply:** makes it visible when the agent acts versus only talks, which is the same gap the eval's tool-log checks cover.
+
+## Eval Scenarios
+
+- **Small scenario schema:** every test has the same fields, so one scorer checks all. Zod catches a bad scenario before the run.
+- **Code checks facts, judge checks tone:** `expect` checks bookings, cancels, verify, escalate and tool calls; `judgeCriteria` checks things like "confirmed before cancelling".
+- **`mustNotCall`:** catches unsafe tries even if the tool failed and nothing changed.
+- **`practice` / `exam` split:** improve on practice, exam stays hidden to catch overfitting.
+
+### Where my judgment overrode AI
+
+- I cut AI's bigger schema (exact slots, escalation counts) to keep it simple.
+- I fixed a wrong tool name (`book_appointment` → `book_slot`) and added `search_slots`.
+- I made `mustNotCall` stricter for cancel and failed-verify cases.
+- I decided failed verification should escalate to staff.
