@@ -9,14 +9,9 @@ export const ScenarioSchema = z.object({
     verifiedPatientId: z.string().nullable(),
     mustCall: z.array(z.string()).default([]),
     mustNotCall: z.array(z.string()).default([]),
-    newBookings: z.number(),
-    newBookingDates: z.array(z.string()).optional(),
-    newBookingSlots: z
-      .array(z.object({ doctor: z.string(), datetime: z.string() }))
-      .optional(),
+    newBookings: z.number().default(0),
     cancelled: z.array(z.string()).default([]),
-    stillBooked: z.array(z.string()).default([]),
-    minEscalations: z.number().default(0),
+    escalate: z.boolean().default(false),
   }),
   judgeCriteria: z.array(z.string()).default([]),
 });
