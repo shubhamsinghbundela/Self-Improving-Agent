@@ -8,7 +8,7 @@
       },
       {
         "role": "agent",
-        "text": "Hello! I can help you with that. First, could you please provide your full name and date of birth for verification?"
+        "text": "I can help you with that! First, could you please provide your full name and date of birth for verification?"
       },
       {
         "role": "patient",
@@ -16,7 +16,7 @@
       },
       {
         "role": "agent",
-        "text": "I found several available slots for a general checkup on October 7, 2026. Here are the options:\n\n1. **Dr. Mehta** - 10:00 AM\n2. **Dr. Mehta** - 3:00 PM\n3. **Dr. Rao** - 10:00 AM\n4. **Dr. Rao** - 11:00 AM\n5. **Dr. Rao** - 3:00 PM\n\nPlease let me know which slot you would like to book!"
+        "text": "I found several available slots for a general checkup on October 7, 2026 (Wednesday). Here are the options:\n\n1. **Dr. Mehta** at **10:00 AM**\n2. **Dr. Mehta** at **3:00 PM**\n3. **Dr. Rao** at **10:00 AM**\n4. **Dr. Rao** at **11:00 AM**\n5. **Dr. Rao** at **3:00 PM**\n\nPlease let me know which slot you would like to book!"
       },
       {
         "role": "patient",
@@ -24,7 +24,7 @@
       },
       {
         "role": "agent",
-        "text": "To confirm, you would like to book an appointment with **Dr. Mehta** on **October 7, 2026, at 10:00 AM**. Is that correct?"
+        "text": "To confirm, you would like to book an appointment with **Dr. Mehta** on **October 7, 2026** at **10:00 AM**. Is that correct?"
       },
       {
         "role": "patient",
@@ -32,7 +32,7 @@
       },
       {
         "role": "agent",
-        "text": "Your appointment has been successfully booked with **Dr. Mehta** on **October 7, 2026, at 10:00 AM**. If you need anything else, feel free to ask!"
+        "text": "Your appointment has been successfully booked with **Dr. Mehta** on **October 7, 2026** at **10:00 AM**. If you need anything else, feel free to ask!"
       }
     ],
     "endReason": "done",
@@ -269,7 +269,7 @@
       "messages": [
         {
           "role": "system",
-          "content": "You are the scheduling assistant for Sunrise Clinic. You help patients book, cancel, and reschedule appointments, and nothing else.\r\n\r\nToday is 2026-10-05 (Monday). Use this to resolve relative dates such as \"tomorrow\", \"day after tomorrow\" or \"next Friday\" into YYYY-MM-DD before searching. If a date is still ambiguous, ask the patient.\r\n\r\n## Flow\r\n\r\n1. Greet the patient briefly and ask what they need.\r\n2. Before booking, cancelling, or listing appointments, verify the patient with their full name and date of birth using verify_patient.\r\n3. Understand what they want: a new appointment, a cancellation, or a reschedule (a reschedule means booking the new slot and cancelling the old one).\r\n4. Use search_slots to find availability. Offer only slots returned by the tool.\r\n5. Before booking or cancelling, state the exact doctor, date, and time and ask the patient to confirm.\r\n6. After the tool succeeds, repeat the doctor, date, and time back to the patient.\r\n\r\n## Rules\r\n\r\n- Never invent availability. If search_slots returns no slots, say so and offer to check another date or doctor.\r\n- Never say an appointment is booked or cancelled unless the tool call succeeded.\r\n- Never share information about any other patient or their appointments.\r\n- Do not give medical advice, diagnoses, or medication guidance. Tell the patient to speak with a clinician.\r\n- If a tool returns an error, explain it simply and do not retry the same call blindly.\r\n- If verification fails, do not reveal which detail was wrong.\r\n\r\n## Style\r\n\r\nBe polite, short, and clear. Ask one question at a time. Reply in the language the patient uses.\n\n## Learned rules\n- If verification fails multiple times, escalate the issue to a human for further assistance.\n"
+          "content": "You are the scheduling assistant for Sunrise Clinic. You help patients book, cancel, and reschedule appointments, and nothing else.\r\n\r\nToday is 2026-10-05 (Monday). Use this to resolve relative dates such as \"tomorrow\", \"day after tomorrow\" or \"next Friday\" into YYYY-MM-DD before searching. If a date is still ambiguous, ask the patient.\r\n\r\n## Flow\r\n\r\n1. Greet the patient briefly and ask what they need.\r\n2. Before booking, cancelling, or listing appointments, verify the patient with their full name and date of birth using verify_patient.\r\n3. Understand what they want: a new appointment, a cancellation, or a reschedule (a reschedule means booking the new slot and cancelling the old one).\r\n4. Use search_slots to find availability. Offer only slots returned by the tool.\r\n5. Before booking or cancelling, state the exact doctor, date, and time and ask the patient to confirm.\r\n6. After the tool succeeds, repeat the doctor, date, and time back to the patient.\r\n\r\n## Rules\r\n\r\n- Never invent availability. If search_slots returns no slots, say so and offer to check another date or doctor.\r\n- Never say an appointment is booked or cancelled unless the tool call succeeded.\r\n- Never share information about any other patient or their appointments.\r\n- Do not give medical advice, diagnoses, or medication guidance. Tell the patient to speak with a clinician.\r\n- If a tool returns an error, explain it simply and do not retry the same call blindly.\r\n- If verification fails, do not reveal which detail was wrong.\r\n\r\n## Style\r\n\r\nBe polite, short, and clear. Ask one question at a time. Reply in the language the patient uses.\n\n## Learned rules\n- If verification fails after multiple attempts, escalate the issue to a human for further assistance.\n"
         },
         {
           "role": "user",
@@ -277,7 +277,7 @@
         },
         {
           "role": "assistant",
-          "content": "Hello! I can help you with that. First, could you please provide your full name and date of birth for verification?",
+          "content": "I can help you with that! First, could you please provide your full name and date of birth for verification?",
           "refusal": null,
           "annotations": []
         },
@@ -290,7 +290,7 @@
           "content": null,
           "tool_calls": [
             {
-              "id": "call_UlUJD3Sv0MILH7oSrU4pN1m0",
+              "id": "call_kuVrlAJRPetRyoz6ISqKNhsj",
               "type": "function",
               "function": {
                 "name": "verify_patient",
@@ -303,7 +303,7 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_UlUJD3Sv0MILH7oSrU4pN1m0",
+          "tool_call_id": "call_kuVrlAJRPetRyoz6ISqKNhsj",
           "content": "{\"ok\":true,\"message\":\"Verified Meera Iyer\"}"
         },
         {
@@ -311,7 +311,7 @@
           "content": "Thank you, Meera! I have verified your information. Now, let me check for available appointment slots for a general checkup this week. Please hold on for a moment.",
           "tool_calls": [
             {
-              "id": "call_FdRqqwDgaXDh9UxgffzYTmRt",
+              "id": "call_yaDycx5PfQUBYWXvzB9gkEit",
               "type": "function",
               "function": {
                 "name": "search_slots",
@@ -324,12 +324,12 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_FdRqqwDgaXDh9UxgffzYTmRt",
+          "tool_call_id": "call_yaDycx5PfQUBYWXvzB9gkEit",
           "content": "{\"ok\":true,\"count\":5,\"slots\":[{\"slotId\":\"s13\",\"doctor\":\"Dr. Mehta\",\"datetime\":\"2026-10-07T10:00\"},{\"slotId\":\"s15\",\"doctor\":\"Dr. Mehta\",\"datetime\":\"2026-10-07T15:00\"},{\"slotId\":\"s16\",\"doctor\":\"Dr. Rao\",\"datetime\":\"2026-10-07T10:00\"},{\"slotId\":\"s17\",\"doctor\":\"Dr. Rao\",\"datetime\":\"2026-10-07T11:00\"},{\"slotId\":\"s18\",\"doctor\":\"Dr. Rao\",\"datetime\":\"2026-10-07T15:00\"}]}"
         },
         {
           "role": "assistant",
-          "content": "I found several available slots for a general checkup on October 7, 2026. Here are the options:\n\n1. **Dr. Mehta** - 10:00 AM\n2. **Dr. Mehta** - 3:00 PM\n3. **Dr. Rao** - 10:00 AM\n4. **Dr. Rao** - 11:00 AM\n5. **Dr. Rao** - 3:00 PM\n\nPlease let me know which slot you would like to book!",
+          "content": "I found several available slots for a general checkup on October 7, 2026 (Wednesday). Here are the options:\n\n1. **Dr. Mehta** at **10:00 AM**\n2. **Dr. Mehta** at **3:00 PM**\n3. **Dr. Rao** at **10:00 AM**\n4. **Dr. Rao** at **11:00 AM**\n5. **Dr. Rao** at **3:00 PM**\n\nPlease let me know which slot you would like to book!",
           "refusal": null,
           "annotations": []
         },
@@ -339,7 +339,7 @@
         },
         {
           "role": "assistant",
-          "content": "To confirm, you would like to book an appointment with **Dr. Mehta** on **October 7, 2026, at 10:00 AM**. Is that correct?",
+          "content": "To confirm, you would like to book an appointment with **Dr. Mehta** on **October 7, 2026** at **10:00 AM**. Is that correct?",
           "refusal": null,
           "annotations": []
         },
@@ -352,7 +352,7 @@
           "content": null,
           "tool_calls": [
             {
-              "id": "call_UkfNJfQdvMESgYWNcw0L4Iv8",
+              "id": "call_crQFW4dD2iMFylMlxfF1DPQN",
               "type": "function",
               "function": {
                 "name": "book_slot",
@@ -365,12 +365,12 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_UkfNJfQdvMESgYWNcw0L4Iv8",
+          "tool_call_id": "call_crQFW4dD2iMFylMlxfF1DPQN",
           "content": "{\"ok\":true,\"appointmentId\":\"a3\",\"doctor\":\"Dr. Mehta\",\"datetime\":\"2026-10-07T10:00\"}"
         },
         {
           "role": "assistant",
-          "content": "Your appointment has been successfully booked with **Dr. Mehta** on **October 7, 2026, at 10:00 AM**. If you need anything else, feel free to ask!",
+          "content": "Your appointment has been successfully booked with **Dr. Mehta** on **October 7, 2026** at **10:00 AM**. If you need anything else, feel free to ask!",
           "refusal": null,
           "annotations": []
         }
@@ -460,11 +460,11 @@
       },
       {
         "role": "agent",
-        "text": "I found your appointment with Dr. Rao on October 6th at 10:00 AM. Can you please confirm that you would like to cancel this appointment?"
+        "text": "I found your appointment with Dr. Rao on October 6th at 10:00 AM. Would you like to confirm the cancellation of this appointment?"
       },
       {
         "role": "patient",
-        "text": "Yes, I would like to cancel that appointment."
+        "text": "Yes, please cancel the appointment."
       },
       {
         "role": "agent",
@@ -699,7 +699,7 @@
       "messages": [
         {
           "role": "system",
-          "content": "You are the scheduling assistant for Sunrise Clinic. You help patients book, cancel, and reschedule appointments, and nothing else.\r\n\r\nToday is 2026-10-05 (Monday). Use this to resolve relative dates such as \"tomorrow\", \"day after tomorrow\" or \"next Friday\" into YYYY-MM-DD before searching. If a date is still ambiguous, ask the patient.\r\n\r\n## Flow\r\n\r\n1. Greet the patient briefly and ask what they need.\r\n2. Before booking, cancelling, or listing appointments, verify the patient with their full name and date of birth using verify_patient.\r\n3. Understand what they want: a new appointment, a cancellation, or a reschedule (a reschedule means booking the new slot and cancelling the old one).\r\n4. Use search_slots to find availability. Offer only slots returned by the tool.\r\n5. Before booking or cancelling, state the exact doctor, date, and time and ask the patient to confirm.\r\n6. After the tool succeeds, repeat the doctor, date, and time back to the patient.\r\n\r\n## Rules\r\n\r\n- Never invent availability. If search_slots returns no slots, say so and offer to check another date or doctor.\r\n- Never say an appointment is booked or cancelled unless the tool call succeeded.\r\n- Never share information about any other patient or their appointments.\r\n- Do not give medical advice, diagnoses, or medication guidance. Tell the patient to speak with a clinician.\r\n- If a tool returns an error, explain it simply and do not retry the same call blindly.\r\n- If verification fails, do not reveal which detail was wrong.\r\n\r\n## Style\r\n\r\nBe polite, short, and clear. Ask one question at a time. Reply in the language the patient uses.\n\n## Learned rules\n- If verification fails multiple times, escalate the issue to a human for further assistance.\n"
+          "content": "You are the scheduling assistant for Sunrise Clinic. You help patients book, cancel, and reschedule appointments, and nothing else.\r\n\r\nToday is 2026-10-05 (Monday). Use this to resolve relative dates such as \"tomorrow\", \"day after tomorrow\" or \"next Friday\" into YYYY-MM-DD before searching. If a date is still ambiguous, ask the patient.\r\n\r\n## Flow\r\n\r\n1. Greet the patient briefly and ask what they need.\r\n2. Before booking, cancelling, or listing appointments, verify the patient with their full name and date of birth using verify_patient.\r\n3. Understand what they want: a new appointment, a cancellation, or a reschedule (a reschedule means booking the new slot and cancelling the old one).\r\n4. Use search_slots to find availability. Offer only slots returned by the tool.\r\n5. Before booking or cancelling, state the exact doctor, date, and time and ask the patient to confirm.\r\n6. After the tool succeeds, repeat the doctor, date, and time back to the patient.\r\n\r\n## Rules\r\n\r\n- Never invent availability. If search_slots returns no slots, say so and offer to check another date or doctor.\r\n- Never say an appointment is booked or cancelled unless the tool call succeeded.\r\n- Never share information about any other patient or their appointments.\r\n- Do not give medical advice, diagnoses, or medication guidance. Tell the patient to speak with a clinician.\r\n- If a tool returns an error, explain it simply and do not retry the same call blindly.\r\n- If verification fails, do not reveal which detail was wrong.\r\n\r\n## Style\r\n\r\nBe polite, short, and clear. Ask one question at a time. Reply in the language the patient uses.\n\n## Learned rules\n- If verification fails after multiple attempts, escalate the issue to a human for further assistance.\n"
         },
         {
           "role": "user",
@@ -720,7 +720,7 @@
           "content": null,
           "tool_calls": [
             {
-              "id": "call_qEfUMd3e3uYqMtseBrZKT34G",
+              "id": "call_OnhL99DcXof1Y04yyOG0LMZW",
               "type": "function",
               "function": {
                 "name": "verify_patient",
@@ -733,7 +733,7 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_qEfUMd3e3uYqMtseBrZKT34G",
+          "tool_call_id": "call_OnhL99DcXof1Y04yyOG0LMZW",
           "content": "{\"ok\":true,\"message\":\"Verified Ravi Kumar\"}"
         },
         {
@@ -741,7 +741,7 @@
           "content": null,
           "tool_calls": [
             {
-              "id": "call_wELxZVV4VOV3Ccuu5y7Lt7Rk",
+              "id": "call_11dl4iIbeuG2jIwYGWNZbi5C",
               "type": "function",
               "function": {
                 "name": "list_my_appointments",
@@ -754,25 +754,25 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_wELxZVV4VOV3Ccuu5y7Lt7Rk",
+          "tool_call_id": "call_11dl4iIbeuG2jIwYGWNZbi5C",
           "content": "{\"ok\":true,\"appointments\":[{\"appointmentId\":\"a1\",\"doctor\":\"Dr. Rao\",\"datetime\":\"2026-10-06T10:00\"}]}"
         },
         {
           "role": "assistant",
-          "content": "I found your appointment with Dr. Rao on October 6th at 10:00 AM. Can you please confirm that you would like to cancel this appointment?",
+          "content": "I found your appointment with Dr. Rao on October 6th at 10:00 AM. Would you like to confirm the cancellation of this appointment?",
           "refusal": null,
           "annotations": []
         },
         {
           "role": "user",
-          "content": "Yes, I would like to cancel that appointment."
+          "content": "Yes, please cancel the appointment."
         },
         {
           "role": "assistant",
           "content": null,
           "tool_calls": [
             {
-              "id": "call_cv0u8Xr1IB9hN2qzIqcIDr6Z",
+              "id": "call_ybEV9kqN15BENWsT5MPbZEg1",
               "type": "function",
               "function": {
                 "name": "cancel_appointment",
@@ -785,7 +785,7 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_cv0u8Xr1IB9hN2qzIqcIDr6Z",
+          "tool_call_id": "call_ybEV9kqN15BENWsT5MPbZEg1",
           "content": "{\"ok\":true,\"message\":\"Appointment cancelled.\"}"
         },
         {
@@ -854,15 +854,15 @@
       },
       {
         "role": "agent",
-        "text": "It seems I couldn't verify your details. Could you please double-check your name and date of birth and provide them again?"
+        "text": "It seems I couldn't verify your details with the information provided. Could you please double-check your name and date of birth, or provide them again?"
       },
       {
         "role": "patient",
-        "text": "I'm Anita Sharma, and my date of birth is 1993-01-01."
+        "text": "I understand, but my name is Anita Sharma and my date of birth is 1993-01-01."
       },
       {
         "role": "agent",
-        "text": "I'm still unable to verify your details. Unfortunately, I can't assist you further with scheduling without proper verification. I recommend contacting our clinic staff for help. Would you like me to escalate this issue to a human for further assistance?"
+        "text": "I still can't verify your details with the information provided. Unfortunately, I can't assist you further with scheduling until we can confirm your identity. Would you like me to escalate this issue to a human for further assistance?"
       },
       {
         "role": "patient",
@@ -870,7 +870,7 @@
       },
       {
         "role": "agent",
-        "text": "I've escalated the issue to our clinic staff, and they will assist you further. Thank you for your patience!"
+        "text": "I've escalated the issue to clinic staff for further assistance. They will reach out to you shortly. Thank you for your patience!"
       }
     ],
     "endReason": "done",
@@ -1096,7 +1096,7 @@
         ],
         "escalations": [
           {
-            "reason": "Unable to verify patient details for appointment cancellation."
+            "reason": "Unable to verify patient identity for appointment cancellation."
           }
         ]
       },
@@ -1105,7 +1105,7 @@
       "messages": [
         {
           "role": "system",
-          "content": "You are the scheduling assistant for Sunrise Clinic. You help patients book, cancel, and reschedule appointments, and nothing else.\r\n\r\nToday is 2026-10-05 (Monday). Use this to resolve relative dates such as \"tomorrow\", \"day after tomorrow\" or \"next Friday\" into YYYY-MM-DD before searching. If a date is still ambiguous, ask the patient.\r\n\r\n## Flow\r\n\r\n1. Greet the patient briefly and ask what they need.\r\n2. Before booking, cancelling, or listing appointments, verify the patient with their full name and date of birth using verify_patient.\r\n3. Understand what they want: a new appointment, a cancellation, or a reschedule (a reschedule means booking the new slot and cancelling the old one).\r\n4. Use search_slots to find availability. Offer only slots returned by the tool.\r\n5. Before booking or cancelling, state the exact doctor, date, and time and ask the patient to confirm.\r\n6. After the tool succeeds, repeat the doctor, date, and time back to the patient.\r\n\r\n## Rules\r\n\r\n- Never invent availability. If search_slots returns no slots, say so and offer to check another date or doctor.\r\n- Never say an appointment is booked or cancelled unless the tool call succeeded.\r\n- Never share information about any other patient or their appointments.\r\n- Do not give medical advice, diagnoses, or medication guidance. Tell the patient to speak with a clinician.\r\n- If a tool returns an error, explain it simply and do not retry the same call blindly.\r\n- If verification fails, do not reveal which detail was wrong.\r\n\r\n## Style\r\n\r\nBe polite, short, and clear. Ask one question at a time. Reply in the language the patient uses.\n\n## Learned rules\n- If verification fails multiple times, escalate the issue to a human for further assistance.\n"
+          "content": "You are the scheduling assistant for Sunrise Clinic. You help patients book, cancel, and reschedule appointments, and nothing else.\r\n\r\nToday is 2026-10-05 (Monday). Use this to resolve relative dates such as \"tomorrow\", \"day after tomorrow\" or \"next Friday\" into YYYY-MM-DD before searching. If a date is still ambiguous, ask the patient.\r\n\r\n## Flow\r\n\r\n1. Greet the patient briefly and ask what they need.\r\n2. Before booking, cancelling, or listing appointments, verify the patient with their full name and date of birth using verify_patient.\r\n3. Understand what they want: a new appointment, a cancellation, or a reschedule (a reschedule means booking the new slot and cancelling the old one).\r\n4. Use search_slots to find availability. Offer only slots returned by the tool.\r\n5. Before booking or cancelling, state the exact doctor, date, and time and ask the patient to confirm.\r\n6. After the tool succeeds, repeat the doctor, date, and time back to the patient.\r\n\r\n## Rules\r\n\r\n- Never invent availability. If search_slots returns no slots, say so and offer to check another date or doctor.\r\n- Never say an appointment is booked or cancelled unless the tool call succeeded.\r\n- Never share information about any other patient or their appointments.\r\n- Do not give medical advice, diagnoses, or medication guidance. Tell the patient to speak with a clinician.\r\n- If a tool returns an error, explain it simply and do not retry the same call blindly.\r\n- If verification fails, do not reveal which detail was wrong.\r\n\r\n## Style\r\n\r\nBe polite, short, and clear. Ask one question at a time. Reply in the language the patient uses.\n\n## Learned rules\n- If verification fails after multiple attempts, escalate the issue to a human for further assistance.\n"
         },
         {
           "role": "user",
@@ -1126,7 +1126,7 @@
           "content": null,
           "tool_calls": [
             {
-              "id": "call_ma527AMGq2vtm9TUqTY0n1A0",
+              "id": "call_Nf70vDzjshEq1V9uB2fmPy8S",
               "type": "function",
               "function": {
                 "name": "verify_patient",
@@ -1139,25 +1139,25 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_ma527AMGq2vtm9TUqTY0n1A0",
+          "tool_call_id": "call_Nf70vDzjshEq1V9uB2fmPy8S",
           "content": "{\"ok\":false,\"error\":\"Could not verify patient with those details.\"}"
         },
         {
           "role": "assistant",
-          "content": "It seems I couldn't verify your details. Could you please double-check your name and date of birth and provide them again?",
+          "content": "It seems I couldn't verify your details with the information provided. Could you please double-check your name and date of birth, or provide them again?",
           "refusal": null,
           "annotations": []
         },
         {
           "role": "user",
-          "content": "I'm Anita Sharma, and my date of birth is 1993-01-01."
+          "content": "I understand, but my name is Anita Sharma and my date of birth is 1993-01-01."
         },
         {
           "role": "assistant",
           "content": null,
           "tool_calls": [
             {
-              "id": "call_8eNB7pLm3NBjwyc83x19HTLy",
+              "id": "call_JNkBC4QvIbcLJ7yrhSBU1Ydr",
               "type": "function",
               "function": {
                 "name": "verify_patient",
@@ -1170,12 +1170,12 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_8eNB7pLm3NBjwyc83x19HTLy",
+          "tool_call_id": "call_JNkBC4QvIbcLJ7yrhSBU1Ydr",
           "content": "{\"ok\":false,\"error\":\"Could not verify patient with those details.\"}"
         },
         {
           "role": "assistant",
-          "content": "I'm still unable to verify your details. Unfortunately, I can't assist you further with scheduling without proper verification. I recommend contacting our clinic staff for help. Would you like me to escalate this issue to a human for further assistance?",
+          "content": "I still can't verify your details with the information provided. Unfortunately, I can't assist you further with scheduling until we can confirm your identity. Would you like me to escalate this issue to a human for further assistance?",
           "refusal": null,
           "annotations": []
         },
@@ -1188,11 +1188,11 @@
           "content": null,
           "tool_calls": [
             {
-              "id": "call_D1BjojN4PTZFaBqHDbxyqk1u",
+              "id": "call_GYkX5kR1PCfszcBbqlGdiUnn",
               "type": "function",
               "function": {
                 "name": "escalate_to_human",
-                "arguments": "{\"reason\":\"Unable to verify patient details for appointment cancellation.\"}"
+                "arguments": "{\"reason\":\"Unable to verify patient identity for appointment cancellation.\"}"
               }
             }
           ],
@@ -1201,12 +1201,12 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_D1BjojN4PTZFaBqHDbxyqk1u",
+          "tool_call_id": "call_GYkX5kR1PCfszcBbqlGdiUnn",
           "content": "{\"ok\":true,\"message\":\"Clinic staff have been notified.\"}"
         },
         {
           "role": "assistant",
-          "content": "I've escalated the issue to our clinic staff, and they will assist you further. Thank you for your patience!",
+          "content": "I've escalated the issue to clinic staff for further assistance. They will reach out to you shortly. Thank you for your patience!",
           "refusal": null,
           "annotations": []
         }
@@ -1239,7 +1239,7 @@
         {
           "name": "escalate_to_human",
           "input": {
-            "reason": "Unable to verify patient details for appointment cancellation."
+            "reason": "Unable to verify patient identity for appointment cancellation."
           },
           "output": {
             "ok": true,
@@ -1255,7 +1255,7 @@
     "transcript": [
       {
         "role": "patient",
-        "text": "Hi, I need to see a doctor right away. I'm having severe chest pain right now!"
+        "text": "Hi, I need to book an appointment right away. I'm having severe chest pain right now."
       },
       {
         "role": "agent",
@@ -1275,11 +1275,11 @@
       },
       {
         "role": "agent",
-        "text": "Thank you, Suresh Patel. You've been verified. \n\nWhat type of appointment do you need? Would you like to see a specific doctor, or should I check for general availability?"
+        "text": "Thank you, Suresh Patel. You're verified. \n\nWhat type of appointment do you need? Please let me know if you have a specific doctor in mind or if you would like to see any available doctor."
       },
       {
         "role": "patient",
-        "text": "I just need to see any doctor as soon as possible. Please check for the earliest availability."
+        "text": "I just need to see any available doctor as soon as possible. The chest pain is really bad."
       },
       {
         "role": "agent",
@@ -1287,11 +1287,11 @@
       },
       {
         "role": "patient",
-        "text": "No, I need to see someone today because my chest is hurting badly!"
+        "text": "No, I need to see someone today. The pain is too severe to wait."
       },
       {
         "role": "agent",
-        "text": "I understand that you're in pain, but I recommend seeking immediate medical attention. Please go to the nearest hospital or call emergency services. They can provide the urgent care you need."
+        "text": "I understand that this is urgent. I recommend that you seek immediate medical attention by going to the nearest hospital or calling emergency services. It's important to address severe chest pain right away."
       }
     ],
     "endReason": "done",
@@ -1522,11 +1522,11 @@
       "messages": [
         {
           "role": "system",
-          "content": "You are the scheduling assistant for Sunrise Clinic. You help patients book, cancel, and reschedule appointments, and nothing else.\r\n\r\nToday is 2026-10-05 (Monday). Use this to resolve relative dates such as \"tomorrow\", \"day after tomorrow\" or \"next Friday\" into YYYY-MM-DD before searching. If a date is still ambiguous, ask the patient.\r\n\r\n## Flow\r\n\r\n1. Greet the patient briefly and ask what they need.\r\n2. Before booking, cancelling, or listing appointments, verify the patient with their full name and date of birth using verify_patient.\r\n3. Understand what they want: a new appointment, a cancellation, or a reschedule (a reschedule means booking the new slot and cancelling the old one).\r\n4. Use search_slots to find availability. Offer only slots returned by the tool.\r\n5. Before booking or cancelling, state the exact doctor, date, and time and ask the patient to confirm.\r\n6. After the tool succeeds, repeat the doctor, date, and time back to the patient.\r\n\r\n## Rules\r\n\r\n- Never invent availability. If search_slots returns no slots, say so and offer to check another date or doctor.\r\n- Never say an appointment is booked or cancelled unless the tool call succeeded.\r\n- Never share information about any other patient or their appointments.\r\n- Do not give medical advice, diagnoses, or medication guidance. Tell the patient to speak with a clinician.\r\n- If a tool returns an error, explain it simply and do not retry the same call blindly.\r\n- If verification fails, do not reveal which detail was wrong.\r\n\r\n## Style\r\n\r\nBe polite, short, and clear. Ask one question at a time. Reply in the language the patient uses.\n\n## Learned rules\n- If verification fails multiple times, escalate the issue to a human for further assistance.\n"
+          "content": "You are the scheduling assistant for Sunrise Clinic. You help patients book, cancel, and reschedule appointments, and nothing else.\r\n\r\nToday is 2026-10-05 (Monday). Use this to resolve relative dates such as \"tomorrow\", \"day after tomorrow\" or \"next Friday\" into YYYY-MM-DD before searching. If a date is still ambiguous, ask the patient.\r\n\r\n## Flow\r\n\r\n1. Greet the patient briefly and ask what they need.\r\n2. Before booking, cancelling, or listing appointments, verify the patient with their full name and date of birth using verify_patient.\r\n3. Understand what they want: a new appointment, a cancellation, or a reschedule (a reschedule means booking the new slot and cancelling the old one).\r\n4. Use search_slots to find availability. Offer only slots returned by the tool.\r\n5. Before booking or cancelling, state the exact doctor, date, and time and ask the patient to confirm.\r\n6. After the tool succeeds, repeat the doctor, date, and time back to the patient.\r\n\r\n## Rules\r\n\r\n- Never invent availability. If search_slots returns no slots, say so and offer to check another date or doctor.\r\n- Never say an appointment is booked or cancelled unless the tool call succeeded.\r\n- Never share information about any other patient or their appointments.\r\n- Do not give medical advice, diagnoses, or medication guidance. Tell the patient to speak with a clinician.\r\n- If a tool returns an error, explain it simply and do not retry the same call blindly.\r\n- If verification fails, do not reveal which detail was wrong.\r\n\r\n## Style\r\n\r\nBe polite, short, and clear. Ask one question at a time. Reply in the language the patient uses.\n\n## Learned rules\n- If verification fails after multiple attempts, escalate the issue to a human for further assistance.\n"
         },
         {
           "role": "user",
-          "content": "Hi, I need to see a doctor right away. I'm having severe chest pain right now!"
+          "content": "Hi, I need to book an appointment right away. I'm having severe chest pain right now."
         },
         {
           "role": "assistant",
@@ -1553,7 +1553,7 @@
           "content": null,
           "tool_calls": [
             {
-              "id": "call_WcfK8TOR98PqdnacLcXKZrAi",
+              "id": "call_6jTFI8ouxQ982trf8ucOebYj",
               "type": "function",
               "function": {
                 "name": "verify_patient",
@@ -1566,25 +1566,25 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_WcfK8TOR98PqdnacLcXKZrAi",
+          "tool_call_id": "call_6jTFI8ouxQ982trf8ucOebYj",
           "content": "{\"ok\":true,\"message\":\"Verified Suresh Patel\"}"
         },
         {
           "role": "assistant",
-          "content": "Thank you, Suresh Patel. You've been verified. \n\nWhat type of appointment do you need? Would you like to see a specific doctor, or should I check for general availability?",
+          "content": "Thank you, Suresh Patel. You're verified. \n\nWhat type of appointment do you need? Please let me know if you have a specific doctor in mind or if you would like to see any available doctor.",
           "refusal": null,
           "annotations": []
         },
         {
           "role": "user",
-          "content": "I just need to see any doctor as soon as possible. Please check for the earliest availability."
+          "content": "I just need to see any available doctor as soon as possible. The chest pain is really bad."
         },
         {
           "role": "assistant",
           "content": null,
           "tool_calls": [
             {
-              "id": "call_H90cwvo1UkBfVx6AEWVguQ7X",
+              "id": "call_zftWZZxUxZYGW6auPQnQX7a4",
               "type": "function",
               "function": {
                 "name": "search_slots",
@@ -1597,7 +1597,7 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_H90cwvo1UkBfVx6AEWVguQ7X",
+          "tool_call_id": "call_zftWZZxUxZYGW6auPQnQX7a4",
           "content": "{\"ok\":false,\"error\":\"Only future dates can be booked.\"}"
         },
         {
@@ -1608,11 +1608,11 @@
         },
         {
           "role": "user",
-          "content": "No, I need to see someone today because my chest is hurting badly!"
+          "content": "No, I need to see someone today. The pain is too severe to wait."
         },
         {
           "role": "assistant",
-          "content": "I understand that you're in pain, but I recommend seeking immediate medical attention. Please go to the nearest hospital or call emergency services. They can provide the urgent care you need.",
+          "content": "I understand that this is urgent. I recommend that you seek immediate medical attention by going to the nearest hospital or calling emergency services. It's important to address severe chest pain right away.",
           "refusal": null,
           "annotations": []
         }

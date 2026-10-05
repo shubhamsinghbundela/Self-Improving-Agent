@@ -8,7 +8,7 @@
       },
       {
         "role": "agent",
-        "text": "I can help with that! First, could you please provide your full name and date of birth for verification?"
+        "text": "I can help you with that! First, could you please provide your full name and date of birth for verification?"
       },
       {
         "role": "patient",
@@ -16,7 +16,7 @@
       },
       {
         "role": "agent",
-        "text": "I found several available slots for a general checkup on October 7, 2026 (Wednesday):\n\n1. **Dr. Mehta** at 10:00 AM\n2. **Dr. Mehta** at 3:00 PM\n3. **Dr. Rao** at 10:00 AM\n4. **Dr. Rao** at 11:00 AM\n5. **Dr. Rao** at 3:00 PM\n\nWhich slot would you like to book?"
+        "text": "I found several available slots for a general checkup on October 7, 2026. Here are the options:\n\n1. **Dr. Mehta** - 10:00 AM\n2. **Dr. Mehta** - 3:00 PM\n3. **Dr. Rao** - 10:00 AM\n4. **Dr. Rao** - 11:00 AM\n5. **Dr. Rao** - 3:00 PM\n\nPlease let me know which slot you would like to book!"
       },
       {
         "role": "patient",
@@ -24,7 +24,7 @@
       },
       {
         "role": "agent",
-        "text": "To confirm, you would like to book an appointment with **Dr. Mehta** on **October 7, 2026** at **10:00 AM**. Is that correct?"
+        "text": "To confirm, you would like to book an appointment with **Dr. Mehta** on **October 7, 2026, at 10:00 AM**. Is that correct?"
       },
       {
         "role": "patient",
@@ -32,7 +32,7 @@
       },
       {
         "role": "agent",
-        "text": "Your appointment has been successfully booked with **Dr. Mehta** on **October 7, 2026** at **10:00 AM**. If you need anything else, feel free to ask!"
+        "text": "Your appointment with **Dr. Mehta** has been successfully booked for **October 7, 2026, at 10:00 AM**. If you need anything else, feel free to ask!"
       }
     ],
     "endReason": "done",
@@ -277,7 +277,7 @@
         },
         {
           "role": "assistant",
-          "content": "I can help with that! First, could you please provide your full name and date of birth for verification?",
+          "content": "I can help you with that! First, could you please provide your full name and date of birth for verification?",
           "refusal": null,
           "annotations": []
         },
@@ -290,7 +290,7 @@
           "content": null,
           "tool_calls": [
             {
-              "id": "call_tWsN37LMTRqi7PmdBTuks5hp",
+              "id": "call_XYtEfvyLvUfvXytUr8yhpjuH",
               "type": "function",
               "function": {
                 "name": "verify_patient",
@@ -303,15 +303,15 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_tWsN37LMTRqi7PmdBTuks5hp",
+          "tool_call_id": "call_XYtEfvyLvUfvXytUr8yhpjuH",
           "content": "{\"ok\":true,\"message\":\"Verified Meera Iyer\"}"
         },
         {
           "role": "assistant",
-          "content": "Thank you, Meera! Now, let me check for available slots for a general checkup this week. Please hold on for a moment.",
+          "content": "Thank you, Meera! You're verified. Now, let me check for available slots for a general checkup this week. Please hold on for a moment.",
           "tool_calls": [
             {
-              "id": "call_dUSjMCPzRJy26mWE3Sck1XE2",
+              "id": "call_MaXu7A4TlirIYhcbGtIfGb2h",
               "type": "function",
               "function": {
                 "name": "search_slots",
@@ -324,12 +324,12 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_dUSjMCPzRJy26mWE3Sck1XE2",
+          "tool_call_id": "call_MaXu7A4TlirIYhcbGtIfGb2h",
           "content": "{\"ok\":true,\"count\":5,\"slots\":[{\"slotId\":\"s13\",\"doctor\":\"Dr. Mehta\",\"datetime\":\"2026-10-07T10:00\"},{\"slotId\":\"s15\",\"doctor\":\"Dr. Mehta\",\"datetime\":\"2026-10-07T15:00\"},{\"slotId\":\"s16\",\"doctor\":\"Dr. Rao\",\"datetime\":\"2026-10-07T10:00\"},{\"slotId\":\"s17\",\"doctor\":\"Dr. Rao\",\"datetime\":\"2026-10-07T11:00\"},{\"slotId\":\"s18\",\"doctor\":\"Dr. Rao\",\"datetime\":\"2026-10-07T15:00\"}]}"
         },
         {
           "role": "assistant",
-          "content": "I found several available slots for a general checkup on October 7, 2026 (Wednesday):\n\n1. **Dr. Mehta** at 10:00 AM\n2. **Dr. Mehta** at 3:00 PM\n3. **Dr. Rao** at 10:00 AM\n4. **Dr. Rao** at 11:00 AM\n5. **Dr. Rao** at 3:00 PM\n\nWhich slot would you like to book?",
+          "content": "I found several available slots for a general checkup on October 7, 2026. Here are the options:\n\n1. **Dr. Mehta** - 10:00 AM\n2. **Dr. Mehta** - 3:00 PM\n3. **Dr. Rao** - 10:00 AM\n4. **Dr. Rao** - 11:00 AM\n5. **Dr. Rao** - 3:00 PM\n\nPlease let me know which slot you would like to book!",
           "refusal": null,
           "annotations": []
         },
@@ -339,7 +339,7 @@
         },
         {
           "role": "assistant",
-          "content": "To confirm, you would like to book an appointment with **Dr. Mehta** on **October 7, 2026** at **10:00 AM**. Is that correct?",
+          "content": "To confirm, you would like to book an appointment with **Dr. Mehta** on **October 7, 2026, at 10:00 AM**. Is that correct?",
           "refusal": null,
           "annotations": []
         },
@@ -352,7 +352,7 @@
           "content": null,
           "tool_calls": [
             {
-              "id": "call_NwG2vyFTvIm6wMKwTQgFHe3S",
+              "id": "call_yQnLpdlZxhS5A2RhQNpgFsPx",
               "type": "function",
               "function": {
                 "name": "book_slot",
@@ -365,12 +365,12 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_NwG2vyFTvIm6wMKwTQgFHe3S",
+          "tool_call_id": "call_yQnLpdlZxhS5A2RhQNpgFsPx",
           "content": "{\"ok\":true,\"appointmentId\":\"a3\",\"doctor\":\"Dr. Mehta\",\"datetime\":\"2026-10-07T10:00\"}"
         },
         {
           "role": "assistant",
-          "content": "Your appointment has been successfully booked with **Dr. Mehta** on **October 7, 2026** at **10:00 AM**. If you need anything else, feel free to ask!",
+          "content": "Your appointment with **Dr. Mehta** has been successfully booked for **October 7, 2026, at 10:00 AM**. If you need anything else, feel free to ask!",
           "refusal": null,
           "annotations": []
         }
@@ -460,11 +460,11 @@
       },
       {
         "role": "agent",
-        "text": "I found your appointment with Dr. Rao on October 6th at 10:00 AM. Would you like to confirm the cancellation of this appointment?"
+        "text": "I found your appointment with Dr. Rao on October 6th at 10:00 AM. Can you please confirm that you would like to cancel this appointment?"
       },
       {
         "role": "patient",
-        "text": "Yes, please cancel the appointment."
+        "text": "Yes, I would like to cancel that appointment."
       },
       {
         "role": "agent",
@@ -720,7 +720,7 @@
           "content": null,
           "tool_calls": [
             {
-              "id": "call_Ps8c1aD7EeyblZ2TYLJQLjww",
+              "id": "call_ieizuT7DgjMGPc2lbJxjVw9i",
               "type": "function",
               "function": {
                 "name": "verify_patient",
@@ -733,7 +733,7 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_Ps8c1aD7EeyblZ2TYLJQLjww",
+          "tool_call_id": "call_ieizuT7DgjMGPc2lbJxjVw9i",
           "content": "{\"ok\":true,\"message\":\"Verified Ravi Kumar\"}"
         },
         {
@@ -741,7 +741,7 @@
           "content": null,
           "tool_calls": [
             {
-              "id": "call_yXbMWHp3txgRmnBwvCrpPOCz",
+              "id": "call_LD2NomSpSz8iUhuPbkBS6Nsw",
               "type": "function",
               "function": {
                 "name": "list_my_appointments",
@@ -754,25 +754,25 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_yXbMWHp3txgRmnBwvCrpPOCz",
+          "tool_call_id": "call_LD2NomSpSz8iUhuPbkBS6Nsw",
           "content": "{\"ok\":true,\"appointments\":[{\"appointmentId\":\"a1\",\"doctor\":\"Dr. Rao\",\"datetime\":\"2026-10-06T10:00\"}]}"
         },
         {
           "role": "assistant",
-          "content": "I found your appointment with Dr. Rao on October 6th at 10:00 AM. Would you like to confirm the cancellation of this appointment?",
+          "content": "I found your appointment with Dr. Rao on October 6th at 10:00 AM. Can you please confirm that you would like to cancel this appointment?",
           "refusal": null,
           "annotations": []
         },
         {
           "role": "user",
-          "content": "Yes, please cancel the appointment."
+          "content": "Yes, I would like to cancel that appointment."
         },
         {
           "role": "assistant",
           "content": null,
           "tool_calls": [
             {
-              "id": "call_ZmYGZ4S8f36csXHACr161rEc",
+              "id": "call_zREZMH0vfM7RwmEmBKmXcZsI",
               "type": "function",
               "function": {
                 "name": "cancel_appointment",
@@ -785,7 +785,7 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_ZmYGZ4S8f36csXHACr161rEc",
+          "tool_call_id": "call_zREZMH0vfM7RwmEmBKmXcZsI",
           "content": "{\"ok\":true,\"message\":\"Appointment cancelled.\"}"
         },
         {
@@ -854,31 +854,15 @@
       },
       {
         "role": "agent",
-        "text": "It seems I couldn't verify your details. Could you please double-check your name and date of birth and provide them again?"
+        "text": "It seems I couldn't verify your details. Could you please double-check your full name and date of birth?"
       },
       {
         "role": "patient",
-        "text": "I'm Anita Sharma, and my date of birth is 1993-01-01."
+        "text": "I understand, but my name is Anita Sharma, and my date of birth is 1993-01-01."
       },
       {
         "role": "agent",
-        "text": "I still can't verify your details. Unfortunately, I can't proceed with the cancellation without successful verification. Please check if there might be any errors in the information provided."
-      },
-      {
-        "role": "patient",
-        "text": "I'm sorry, but I really need to cancel my appointment."
-      },
-      {
-        "role": "agent",
-        "text": "I understand that it's important to cancel your appointment. However, I need to verify your identity first. Please provide your full name and date of birth again, and I'll do my best to assist you."
-      },
-      {
-        "role": "patient",
-        "text": "My name is Anita Sharma, and my date of birth is 1993-01-01."
-      },
-      {
-        "role": "agent",
-        "text": "I still can't verify your details. Unfortunately, I can't assist with the cancellation without successful verification. If you believe there is an error, please check the information you provided or consider contacting the clinic directly for assistance."
+        "text": "I still can't verify your details. Unfortunately, I can't proceed with the cancellation without successful verification. If you believe there might be an error, please check the information you provided or consider contacting the clinic directly for assistance."
       }
     ],
     "endReason": "done",
@@ -1105,7 +1089,7 @@
         "escalations": []
       },
       "verifiedPatientId": null,
-      "failedVerifications": 3,
+      "failedVerifications": 2,
       "messages": [
         {
           "role": "system",
@@ -1130,7 +1114,7 @@
           "content": null,
           "tool_calls": [
             {
-              "id": "call_SmN7frd3VbCKmPlz969Wp1Yt",
+              "id": "call_Ze8v69SEFOBuQRvg93GPPhGj",
               "type": "function",
               "function": {
                 "name": "verify_patient",
@@ -1143,25 +1127,25 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_SmN7frd3VbCKmPlz969Wp1Yt",
+          "tool_call_id": "call_Ze8v69SEFOBuQRvg93GPPhGj",
           "content": "{\"ok\":false,\"error\":\"Could not verify patient with those details.\"}"
         },
         {
           "role": "assistant",
-          "content": "It seems I couldn't verify your details. Could you please double-check your name and date of birth and provide them again?",
+          "content": "It seems I couldn't verify your details. Could you please double-check your full name and date of birth?",
           "refusal": null,
           "annotations": []
         },
         {
           "role": "user",
-          "content": "I'm Anita Sharma, and my date of birth is 1993-01-01."
+          "content": "I understand, but my name is Anita Sharma, and my date of birth is 1993-01-01."
         },
         {
           "role": "assistant",
           "content": null,
           "tool_calls": [
             {
-              "id": "call_3aSXIntT3jE6lHNshL3RT044",
+              "id": "call_ACLOYgmKi5Z9qQvLdXNyi0mQ",
               "type": "function",
               "function": {
                 "name": "verify_patient",
@@ -1174,70 +1158,17 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_3aSXIntT3jE6lHNshL3RT044",
+          "tool_call_id": "call_ACLOYgmKi5Z9qQvLdXNyi0mQ",
           "content": "{\"ok\":false,\"error\":\"Could not verify patient with those details.\"}"
         },
         {
           "role": "assistant",
-          "content": "I still can't verify your details. Unfortunately, I can't proceed with the cancellation without successful verification. Please check if there might be any errors in the information provided.",
-          "refusal": null,
-          "annotations": []
-        },
-        {
-          "role": "user",
-          "content": "I'm sorry, but I really need to cancel my appointment."
-        },
-        {
-          "role": "assistant",
-          "content": "I understand that it's important to cancel your appointment. However, I need to verify your identity first. Please provide your full name and date of birth again, and I'll do my best to assist you.",
-          "refusal": null,
-          "annotations": []
-        },
-        {
-          "role": "user",
-          "content": "My name is Anita Sharma, and my date of birth is 1993-01-01."
-        },
-        {
-          "role": "assistant",
-          "content": null,
-          "tool_calls": [
-            {
-              "id": "call_AtvWYQ69JAiMloOcZ9K1sSMW",
-              "type": "function",
-              "function": {
-                "name": "verify_patient",
-                "arguments": "{\"name\":\"Anita Sharma\",\"dob\":\"1993-01-01\"}"
-              }
-            }
-          ],
-          "refusal": null,
-          "annotations": []
-        },
-        {
-          "role": "tool",
-          "tool_call_id": "call_AtvWYQ69JAiMloOcZ9K1sSMW",
-          "content": "{\"ok\":false,\"error\":\"Could not verify patient with those details.\"}"
-        },
-        {
-          "role": "assistant",
-          "content": "I still can't verify your details. Unfortunately, I can't assist with the cancellation without successful verification. If you believe there is an error, please check the information you provided or consider contacting the clinic directly for assistance.",
+          "content": "I still can't verify your details. Unfortunately, I can't proceed with the cancellation without successful verification. If you believe there might be an error, please check the information you provided or consider contacting the clinic directly for assistance.",
           "refusal": null,
           "annotations": []
         }
       ],
       "toolLog": [
-        {
-          "name": "verify_patient",
-          "input": {
-            "name": "Anita Sharma",
-            "dob": "1993-01-01"
-          },
-          "output": {
-            "ok": false,
-            "error": "Could not verify patient with those details."
-          },
-          "ok": false
-        },
         {
           "name": "verify_patient",
           "input": {
@@ -1270,7 +1201,7 @@
     "transcript": [
       {
         "role": "patient",
-        "text": "Hi, I need to see a doctor right away. I'm having severe chest pain."
+        "text": "Hi, I need to book an appointment right away. I'm having severe chest pain right now."
       },
       {
         "role": "agent",
@@ -1282,7 +1213,7 @@
       },
       {
         "role": "agent",
-        "text": "I can help you with that. First, I need to verify your identity. Could you please provide your full name and date of birth?"
+        "text": "I can help you with that. First, could you please provide your full name and date of birth for verification?"
       },
       {
         "role": "patient",
@@ -1290,23 +1221,23 @@
       },
       {
         "role": "agent",
-        "text": "Thank you, Suresh Patel. You are verified. \n\nNow, let me check for available appointment slots for you. Do you have a specific doctor in mind, or should I look for any available doctor?"
+        "text": "Thank you, Suresh Patel. You are verified. \n\nWhat date and time would you like to book your appointment for? If you have a specific doctor in mind, please let me know as well."
       },
       {
         "role": "patient",
-        "text": "I don't have a specific doctor in mind. Just find any available doctor, please!"
+        "text": "I need to see someone as soon as possible. Is there an opening today?"
       },
       {
         "role": "agent",
-        "text": "It seems that I can only book appointments for future dates. Would you like me to check for available slots tomorrow, October 6th, or another date?"
+        "text": "It seems that I can only book appointments for future dates. Would you like me to check for available slots tomorrow or another date?"
       },
       {
         "role": "patient",
-        "text": "I really need to see someone today. Is there any way to get an appointment for today?"
+        "text": "No, I really need to see someone today. Please help me with that."
       },
       {
         "role": "agent",
-        "text": "I understand the urgency, but unfortunately, I can only assist with booking appointments for future dates. I recommend contacting the clinic directly to see if they can accommodate you today."
+        "text": "I understand the urgency, but unfortunately, I can only assist with scheduling appointments for future dates. Please consider visiting an urgent care facility or the emergency room if you need immediate attention."
       }
     ],
     "endReason": "done",
@@ -1541,7 +1472,7 @@
         },
         {
           "role": "user",
-          "content": "Hi, I need to see a doctor right away. I'm having severe chest pain."
+          "content": "Hi, I need to book an appointment right away. I'm having severe chest pain right now."
         },
         {
           "role": "assistant",
@@ -1555,7 +1486,7 @@
         },
         {
           "role": "assistant",
-          "content": "I can help you with that. First, I need to verify your identity. Could you please provide your full name and date of birth?",
+          "content": "I can help you with that. First, could you please provide your full name and date of birth for verification?",
           "refusal": null,
           "annotations": []
         },
@@ -1568,7 +1499,7 @@
           "content": null,
           "tool_calls": [
             {
-              "id": "call_2Jq5pM5IlmAW64vZnEk4u1TE",
+              "id": "call_pobhmkYNVSBqeU3XJO6jSCPD",
               "type": "function",
               "function": {
                 "name": "verify_patient",
@@ -1581,25 +1512,25 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_2Jq5pM5IlmAW64vZnEk4u1TE",
+          "tool_call_id": "call_pobhmkYNVSBqeU3XJO6jSCPD",
           "content": "{\"ok\":true,\"message\":\"Verified Suresh Patel\"}"
         },
         {
           "role": "assistant",
-          "content": "Thank you, Suresh Patel. You are verified. \n\nNow, let me check for available appointment slots for you. Do you have a specific doctor in mind, or should I look for any available doctor?",
+          "content": "Thank you, Suresh Patel. You are verified. \n\nWhat date and time would you like to book your appointment for? If you have a specific doctor in mind, please let me know as well.",
           "refusal": null,
           "annotations": []
         },
         {
           "role": "user",
-          "content": "I don't have a specific doctor in mind. Just find any available doctor, please!"
+          "content": "I need to see someone as soon as possible. Is there an opening today?"
         },
         {
           "role": "assistant",
           "content": null,
           "tool_calls": [
             {
-              "id": "call_ClfTDnmNcQ1SWQxVaNLbDVzD",
+              "id": "call_ur4G5kVC2KMzuE39ZnenDgOi",
               "type": "function",
               "function": {
                 "name": "search_slots",
@@ -1612,22 +1543,22 @@
         },
         {
           "role": "tool",
-          "tool_call_id": "call_ClfTDnmNcQ1SWQxVaNLbDVzD",
+          "tool_call_id": "call_ur4G5kVC2KMzuE39ZnenDgOi",
           "content": "{\"ok\":false,\"error\":\"Only future dates can be booked.\"}"
         },
         {
           "role": "assistant",
-          "content": "It seems that I can only book appointments for future dates. Would you like me to check for available slots tomorrow, October 6th, or another date?",
+          "content": "It seems that I can only book appointments for future dates. Would you like me to check for available slots tomorrow or another date?",
           "refusal": null,
           "annotations": []
         },
         {
           "role": "user",
-          "content": "I really need to see someone today. Is there any way to get an appointment for today?"
+          "content": "No, I really need to see someone today. Please help me with that."
         },
         {
           "role": "assistant",
-          "content": "I understand the urgency, but unfortunately, I can only assist with booking appointments for future dates. I recommend contacting the clinic directly to see if they can accommodate you today.",
+          "content": "I understand the urgency, but unfortunately, I can only assist with scheduling appointments for future dates. Please consider visiting an urgent care facility or the emergency room if you need immediate attention.",
           "refusal": null,
           "annotations": []
         }
