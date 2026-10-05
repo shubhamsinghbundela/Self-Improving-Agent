@@ -1,15 +1,22 @@
-# self-improving-agent
+# Self-Improving Clinic Scheduling Agent
 
-To install dependencies:
+A patient-appointment scheduling agent, plus an eval harness that finds the agent's failures, turns them into a prompt fix, and re-runs to prove the score went up without breaking anything.
+
+## Setup
 
 ```bash
 bun install
 ```
 
-To run:
+Create a `.env` file:
 
-```bash
-bun run index.ts
+```
+OPENAI_API_KEY=your-key-here
 ```
 
-This project was created using `bun init` in bun v1.3.14. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+## Run
+
+```bash
+bun run chat   # talk to the agent yourself
+bun run eval   # run the full improvement loop (v1 -> v2)
+```
